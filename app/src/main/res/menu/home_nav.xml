@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/newsFeed"
+        android:enabled="true"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title=""
+        android:visible="true"
+        />
+
+     <item
+        android:id="@+id/notificationNav"
+        android:enabled="true"
+        android:icon="@drawable/ic_notifications_black_24dp"
+        android:title=""
+        android:visible="true" />
+
+     <item
+        android:id="@+id/viewNav"
+        android:enabled="true"
+        android:icon="@drawable/ic_view_headline_black_24dp"
+         android:title=""
+        android:visible="true" />
+
+
+
+</menu>

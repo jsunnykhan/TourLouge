@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ProfileListFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:orientation="horizontal"
+        android:layout_margin="5dp"
+        android:background="@drawable/border"
+
+        android:gravity="center">
+        <ImageView
+            android:id="@+id/imageTV"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@mipmap/tour_louge" />
+        <TextView
+            android:id="@+id/profileTv"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="5dp"
+            android:text="Md.Sweet khan sunny"
+            android:textSize="22sp"
+            android:textColor="@color/Black"
+            android:padding="12dp"
+            android:drawableRight="@drawable/arrow"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/createEvent"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="5dp"
+        android:text="Create an Event"
+        android:textSize="22sp"
+        android:textColor="@color/Black"
+        android:padding="12dp"
+        android:background="@drawable/border"
+        android:drawableRight="@drawable/arrow"
+        android:drawableLeft="@drawable/create_event"/>
+
+    <TextView
+        android:id="@+id/friendTv"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="5dp"
+        android:text="Friends"
+        android:textSize="22sp"
+        android:textColor="@color/Black"
+        android:padding="12dp"
+        android:background="@drawable/border"
+        android:drawableRight="@drawable/arrow"
+        android:drawableLeft="@drawable/friend"/>
+    <TextView
+        android:id="@+id/weather"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="5dp"
+        android:text="Weather"
+        android:textSize="22sp"
+        android:textColor="@color/Black"
+        android:padding="12dp"
+        android:background="@drawable/border"
+        android:drawableRight="@drawable/arrow"
+        android:drawableLeft="@drawable/rain"/>
+    <TextView
+        android:id="@+id/maps"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="5dp"
+        android:text="Maps"
+        android:textSize="22sp"
+        android:textColor="@color/Black"
+        android:padding="12dp"
+        android:background="@drawable/border"
+        android:drawableRight="@drawable/arrow"
+        android:drawableLeft="@drawable/map"/>
+    <TextView
+        android:id="@+id/nearby"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="5dp"
+        android:text="Nearby places"
+        android:textSize="22sp"
+        android:textColor="@color/Black"
+        android:padding="12dp"
+        android:background="@drawable/border"
+        android:drawableRight="@drawable/arrow"
+        android:drawableLeft="@drawable/neaby"/>
+    <TextView
+        android:id="@+id/logout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="5dp"
+        android:text="Logout"
+        android:textSize="22sp"
+        android:textColor="@color/Red"
+        android:padding="12dp"
+        android:background="@drawable/border"
+       android:gravity="center"/>
+
+
+    
+
+
+</LinearLayout>

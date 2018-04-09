@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#202b38</color>
+    <color name="White">#ffffff</color>
+    <color name="EditTextBackground">#0e2f40</color>
+    <color name="EditTexttint">#a1adbb</color>
+    <color name="ButtonBackground">#70193c</color>
+    <color name="textTerms">#f5f2f4</color>
+
+
+    <color name="HomeBack">#3eb311</color>
+    <color name="Red">#b31119</color>
+    <color name="Chy">#393535</color>
+    <color name="gre">#ecebeb</color>
+
+
+
+    <color name="Black">#000303</color>
+    <color name="whiteBlack">#282b2b</color>
+
+</resources>

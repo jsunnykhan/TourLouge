@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_photo"
+    android:orientation="vertical"
+    tools:context=".LoginActivity">
+
+    <EditText
+        android:id="@+id/userEt"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="290dp"
+        android:background="@drawable/edittext_background"
+        android:baselineAligned="false"
+        android:drawableLeft="@drawable/user_drawable"
+        android:fontFamily="@font/roboto"
+        android:hint="User name"
+        android:textColor="@color/White"
+        android:textColorHint="@color/EditTexttint" />
+
+    <EditText
+        android:id="@+id/passEt"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:hint="***********"
+        android:textColorHint="@color/EditTexttint"
+        android:textColor="@color/White"
+        android:fontFamily="@font/roboto"
+        android:inputType="textPassword"
+        android:background="@drawable/edittext_background"
+        android:drawableLeft="@drawable/password_drawable"/>
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:onClick="SigninMethod"
+        android:text="Sign in"
+        android:fontFamily="@font/roboto"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:textAllCaps="false"
+        android:background="@drawable/button_background"
+        android:textColor="@color/White"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:padding="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="forgetPasswordMethod"
+            android:text="Forget password?"
+            android:textColor="@color/White"
+            android:textSize="16dp"
+            android:fontFamily="@font/roboto"
+            android:layout_marginLeft="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="createAccountMethod"
+            android:text="Create new account"
+            android:textColor="@color/White"
+            android:layout_marginLeft="25dp"
+            android:textSize="16dp"
+
+            android:fontFamily="@font/roboto"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

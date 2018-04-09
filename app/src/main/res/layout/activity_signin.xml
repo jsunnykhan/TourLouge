@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/login_photo"
+    tools:context=".SigninActivity">
+
+    <EditText
+        android:id="@+id/nameEt"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="150dp"
+        android:hint="Name"
+        android:textColorHint="@color/EditTexttint"
+        android:textColor="@color/White"
+        android:background="@drawable/edittext_background"
+        android:layout_gravity="center"
+        android:drawableLeft="@drawable/signup_edittext_space"/>
+    <EditText
+        android:id="@+id/userEt"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="20dp"
+        android:hint="Username"
+        android:textColorHint="@color/EditTexttint"
+        android:textColor="@color/White"
+        android:background="@drawable/edittext_background"
+        android:layout_gravity="center"
+        android:drawableLeft="@drawable/signup_edittext_space"
+        />
+    <EditText
+        android:id="@+id/passEt"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:hint="Password"
+        android:layout_marginTop="20dp"
+        android:textColorHint="@color/EditTexttint"
+        android:textColor="@color/White"
+        android:background="@drawable/edittext_background"
+        android:layout_gravity="center"
+        android:drawableLeft="@drawable/signup_edittext_space"/>
+    <EditText
+        android:id="@+id/emailEt"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="20dp"
+        android:hint="Email"
+        android:textColorHint="@color/EditTexttint"
+        android:textColor="@color/White"
+        android:background="@drawable/edittext_background"
+        android:layout_gravity="center"
+        android:drawableLeft="@drawable/signup_edittext_space"/>
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
+        android:text="By signing up you agree to the Privacy policy and terms of service"
+        android:fontFamily="@font/roboto"
+        android:textAlignment="center"
+        android:textSize="16dp"
+        android:textColor="@color/textTerms"/>
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="45dp"
+        android:text="Sign up"
+        android:onClick="signupMethod"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/roboto"
+        android:textAllCaps="false"
+        android:background="@drawable/edittext_background"
+        android:textColor="@color/White"
+        android:layout_gravity="center"
+        />
+
+
+</LinearLayout>
