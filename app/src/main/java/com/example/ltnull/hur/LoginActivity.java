@@ -21,6 +21,8 @@ public class LoginActivity extends AppCompatActivity {
     EditText user;
     EditText pass;
     SessionManager sessionManager;
+    Response.Listener<String> respnoseListener;
+    private String username , password ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,36 +38,45 @@ public class LoginActivity extends AppCompatActivity {
             finish();
         }
 
-
     }
 
     public void SigninMethod(View view) {
-        final String username = user.getText().toString();
-        String password = pass.getText().toString();
+        username = user.getText().toString();
+        password = pass.getText().toString();
 
-        Response.Listener<String> respnoseListener = new Response.Listener<String>() {
-            @Override
-            public void onResponse(String response) {
-                try {
-                    JSONObject object = new JSONObject(response);
-                    boolean success = object.getBoolean("success");
-                    if(success){
-                        String name = object.getString("name");
-                        String email = object.getString("email");
-                        sessionManager.setLogIn(true);
-                        sessionManager.setUserName(username);
 
-                        Intent intent = new Intent(LoginActivity.this , HomeActivity.class);
-                        LoginActivity.this.startActivity(intent);
-                        finish();
-                    }else{
-                        Toast.makeText(LoginActivity.this, "Failed to connect try again", Toast.LENGTH_SHORT).show();
+
+        if(username.isEmpty()){
+            Toast.makeText(this, "Enter Username", Toast.LENGTH_SHORT).show();
+        }
+        else if(password.isEmpty()){
+            Toast.makeText(this, "Enter Password", Toast.LENGTH_SHORT).show();
+        }
+        else {
+            respnoseListener = new Response.Listener<String>() {
+                @Override
+                public void onResponse(String response) {
+                    try {
+                        JSONObject object = new JSONObject(response);
+                        boolean success = object.getBoolean("success");
+                        if (success) {
+                            String name = object.getString("name");
+                            String email = object.getString("email");
+                            sessionManager.setLogIn(true);
+                            sessionManager.setUserName(username);
+
+                            Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                            LoginActivity.this.startActivity(intent);
+                            finish();
+                        } else {
+                            Toast.makeText(LoginActivity.this, "Failed to connect try again", Toast.LENGTH_SHORT).show();
+                        }
+                    } catch (JSONException e) {
+                        e.printStackTrace();
                     }
-                } catch (JSONException e) {
-                    e.printStackTrace();
                 }
-            }
-        };
+            };
+        }
         LoginHelper loginHelper = new LoginHelper(username , password ,respnoseListener );
         RequestQueue queue = Volley.newRequestQueue(LoginActivity.this);
         queue.add(loginHelper);

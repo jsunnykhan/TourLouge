@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateEventActivity"
+    >
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="10dp">
+
+
+
+    <EditText
+        android:id="@+id/EventName"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Tour Name" />
+
+    <EditText
+    android:id="@+id/EventPlace"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:hint="Tour Places"/>
+
+    <EditText
+    android:id="@+id/EventJoiningDate"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:hint="Start Date"/>
+
+    <EditText
+    android:id="@+id/EventDuration"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:hint="Tour Duration"/>
+
+    <EditText
+    android:id="@+id/EventCost"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:hint="Tour Total Cost"/>
+
+    <EditText
+    android:id="@+id/EventCapacity"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:hint="Tour Capacity"/>
+
+    <EditText
+    android:id="@+id/EventNumber"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:hint="Tour Manager Phone Number"/>
+
+    <EditText
+    android:id="@+id/EventDescription"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:hint="Tour Description" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Create an Event"
+        android:background="@drawable/button_background"
+        android:textAllCaps="false"
+        android:textColor="@color/White"
+        android:onClick="CreateAnEvent"
+        android:layout_marginTop="35dp"/>
+
+
+
+</LinearLayout>
+
+
+</ScrollView>

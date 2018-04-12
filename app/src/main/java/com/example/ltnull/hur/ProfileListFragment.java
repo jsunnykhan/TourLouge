@@ -84,6 +84,9 @@ public class ProfileListFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
+                Intent intent = new Intent(context , CreateEventActivity.class);
+                startActivity(intent);
+
             }
         });
 
@@ -104,6 +107,8 @@ public class ProfileListFragment extends Fragment {
         weather.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(context , WeateherActivity.class);
+                startActivity(intent);
 
             }
         });
@@ -115,7 +120,8 @@ public class ProfileListFragment extends Fragment {
         maps.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(context , GoogleMapactivity.class);
+                startActivity(intent);
             }
         });
 

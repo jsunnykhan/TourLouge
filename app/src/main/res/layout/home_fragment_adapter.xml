@@ -6,14 +6,13 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:id="@+id/homeFragmentDesign"
-    android:layout_marginTop="10dp"
-    android:layout_marginBottom="5dp"
     app:cardElevation="5dp"
     >
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/border">
+        android:background="@drawable/border"
+        android:layout_marginTop="10dp">
 
 
         <ImageView

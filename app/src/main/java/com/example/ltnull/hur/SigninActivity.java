@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -23,6 +24,8 @@ public class SigninActivity extends AppCompatActivity {
     private EditText nameEt;
     private EditText emailEt;
     SessionManager sessionManager;
+
+    Response.Listener<String> responseListener ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,27 +48,42 @@ public class SigninActivity extends AppCompatActivity {
         final String password =passEt.getText().toString();
         final String email =emailEt.getText().toString();
 
-        Response.Listener<String> responseListener = new Response.Listener<String>() {
-            @Override
-            public void onResponse(String response) {
-                try {
-                    JSONObject object = new JSONObject(response);
-                    boolean success =object.getBoolean("success");
-                    if (success){
-                        sessionManager.setLogIn(true);
-                        Intent intent = new Intent(SigninActivity.this , HomeActivity.class);
-                        SigninActivity.this.startActivity(intent);
-                        finish();
 
-                    }else{
-                        AlertDialog.Builder builder =new AlertDialog.Builder(SigninActivity.this);
-                        builder.setMessage("Register Failed").setNegativeButton("Retry",null).create().show();
+        if(name.isEmpty()){
+            Toast.makeText(this, "Fill your Name", Toast.LENGTH_SHORT).show();
+        }
+        else if(username.isEmpty()){
+            Toast.makeText(this, "Enter Username", Toast.LENGTH_SHORT).show();
+        }
+        else if(password.isEmpty()){
+            Toast.makeText(this, "Enter password", Toast.LENGTH_SHORT).show();
+        }
+        else if (email.isEmpty()){
+            Toast.makeText(this, "Enter your Email", Toast.LENGTH_SHORT).show();
+        }
+        else {
+            responseListener = new Response.Listener<String>() {
+                @Override
+                public void onResponse(String response) {
+                    try {
+                        JSONObject object = new JSONObject(response);
+                        boolean success = object.getBoolean("success");
+                        if (success) {
+                            sessionManager.setLogIn(true);
+                            Intent intent = new Intent(SigninActivity.this, HomeActivity.class);
+                            SigninActivity.this.startActivity(intent);
+                            finish();
+
+                        } else {
+                            AlertDialog.Builder builder = new AlertDialog.Builder(SigninActivity.this);
+                            builder.setMessage("Register Failed").setNegativeButton("Retry", null).create().show();
+                        }
+                    } catch (JSONException e) {
+                        e.printStackTrace();
                     }
-                } catch (JSONException e) {
-                    e.printStackTrace();
                 }
-            }
-        };
+            };
+        }
 
         SignupHelper signupHelper = new SignupHelper(username ,password ,name ,email, responseListener);
         RequestQueue queue = Volley.newRequestQueue(SigninActivity.this);
