@@ -6,12 +6,18 @@ import java.util.Date;
 
 public class TimeHelper {
 
-    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
+    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss aaa");
+    long dateDeference;
 
-public Date getRightNowTime(){
+    public Date getRightNowTime(){
 
    Date currentTime = Calendar.getInstance().getTime();
    return currentTime;
+}
+
+public long getTimeDeferencesNowToFrom(Date fromDate){
+
+    return dateDeference;
 }
 
 

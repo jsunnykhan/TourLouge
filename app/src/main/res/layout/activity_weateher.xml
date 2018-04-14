@@ -4,13 +4,74 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".WeateherActivity">
+    tools:context=".WeateherActivity"
+    android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/weatherTv"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="name"
-        />
+        android:layout_height="250dp">
+
+        <TextView
+            android:id="@+id/weatherTv"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="14dp"
+            android:drawableRight="@drawable/location_back"
+            android:fontFamily="@font/roboto"
+            android:gravity="center"
+            android:padding="3dp"
+            android:text="Name"
+            android:textColor="@color/Weather"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/temperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/roboto"
+            android:gravity="center"
+            android:padding="3dp"
+            android:text="36°"
+            android:textColor="@color/Weather"
+            android:textSize="70sp" />
+
+
+        <TextView
+            android:id="@+id/condition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="40dp"
+            android:gravity="center"
+            android:text="Sunny"
+            android:textColor="@color/Weather"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/maxMin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="11dp"
+            android:fontFamily="@font/roboto"
+            android:gravity="center"
+            android:text="24/25"
+            android:textColor="@color/Weather"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+
 
 </LinearLayout>

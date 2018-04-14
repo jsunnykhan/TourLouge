@@ -43,7 +43,6 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.HomeViewHolder
         holder.name.setText(newsfeed.getName());
         holder.time.setText(newsfeed.getTime());
         holder.news.setText(newsfeed.getNews());
-        Glide.with(context).load(newsfeed.getImage()).into(holder.imageView);
 
     }
 

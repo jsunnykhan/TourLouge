@@ -73,10 +73,9 @@ public class HomeFragment extends Fragment {
                     for(int i=0 ; i<object.length() ; i++){
                         JSONObject jsonObject = object.getJSONObject(i);
                         list.add(new HomePojo(jsonObject.getInt("id"),
-                                jsonObject.getString("image"),
-                                jsonObject.getString("name"),
-                                jsonObject.getString("time"),
-                                jsonObject.getString("news")));
+                                jsonObject.getString("post"),
+                                jsonObject.getString("date"),
+                                jsonObject.getString("name")));
                     }
                     HomeAdapter homeAdapter = new HomeAdapter(getContext() , list);
                     recyclerView.setAdapter(homeAdapter);

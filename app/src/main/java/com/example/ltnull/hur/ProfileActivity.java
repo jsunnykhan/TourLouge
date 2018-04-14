@@ -66,7 +66,6 @@ public class ProfileActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if (resultCode == Activity.RESULT_OK) {
             if (resultCode == Activity.RESULT_OK) {
                 //pick image from gallery
                 Uri selectedImage = data.getData();
@@ -82,8 +81,6 @@ public class ProfileActivity extends AppCompatActivity {
                 cursor.close();
                Bitmap bitmap = BitmapFactory.decodeFile(imgDecodableString);
 
-
-            }
         }
     }
 }

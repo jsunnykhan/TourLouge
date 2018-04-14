@@ -6,14 +6,13 @@ import java.util.ArrayList;
 
 public class HomePojo {
     private String image;
-    private String name , time , news ;
+    private String name , time , post ;
     private int id;
 
-    public HomePojo(int id ,String image, String name, String time, String news) {
-        this.image = image;
+    public HomePojo(int id , String post, String time, String name) {
         this.name = name;
         this.time = time;
-        this.news = news;
+        this.post = post;
         this.id = id ;
     }
 
@@ -50,11 +49,11 @@ public class HomePojo {
     }
 
     public String getNews() {
-        return news;
+        return post;
     }
 
     public void setNews(String news) {
-        this.news = news;
+        this.post = post;
     }
 
 }

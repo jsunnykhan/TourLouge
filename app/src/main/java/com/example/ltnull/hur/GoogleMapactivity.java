@@ -63,7 +63,7 @@ public class GoogleMapactivity extends FragmentActivity implements OnMapReadyCal
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
-        googleMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(this, R.raw.mapstyle));
+        //googleMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(this, R.raw.mapstyle));
         mMap = googleMap;
 
         client = new GoogleApiClient.Builder(this)
@@ -85,7 +85,7 @@ public class GoogleMapactivity extends FragmentActivity implements OnMapReadyCal
             try {
                 list =  geocoder.getFromLocation(location.getLatitude(),location.getLongitude(),1);
 
-                 city = list.get(0).getLocality();
+                 city = list.get(0).getAddressLine(0);
             } catch (IOException e) {
                 e.printStackTrace();
             }
